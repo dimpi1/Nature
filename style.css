@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav h1{
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+}
+
+nav{
+  background-color: #46d3e9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    /* width: 100vw; */
+}
+
+a{
+  text-align: center;
+  font-size: 28px;
+  text-decoration: none;
+  padding: 5px;
+  color: #052a30;
+}
+
+
+a:hover{
+    /* border: 2px solid #98ddec; */
+    padding: 5px;
+    background-color: #0abdd8;
+}
+
+@media screen and (max-width:620px){
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+    }
+}
+
+hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: rgb(92, 166, 236);
+    border-width: 2px 0 0 0;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: rgb(92, 194, 249);
+    border-width: 0 0 3px 0;
+    border-radius: 20px;
+}
+
+
+#slideshow{
+  width: 90vw;
+  height: 80vh; 
+  margin: 12px auto;
+  overflow: hidden;
+  box-shadow: -1px 0px 29px -2px rgba(0,0,0,0.49);
+-webkit-box-shadow: -1px 0px 29px -2px rgba(0,0,0,0.49);
+-moz-box-shadow: -1px 0px 29px -2px rgba(0,0,0,0.49);
+
+}
+
+.slide{
+  float:left
+}
+
+.slide img{
+
+  height: 700px;
+  width: 90vw;
+}
+
+.wraper{
+  width: calc(90vw*6);
+  animation:  15s ease infinite slider;
+}
+
+@keyframes slider {
+  /* Calculate the margin-left for 
+  each of the slides */
+
+  16% {
+    margin-left: 0px;
+  }
+  
+  32% {
+    margin-left: calc(-90vw * 1);
+  }
+  
+  48% {
+    margin-left: calc(-90vw * 2);
+  }
+  
+  64% {
+    margin-left: calc(-90vw* 3);
+  }
+
+  80%{
+    margin-left:calc(-90vw*4);
+  }
+
+  96%{
+    margin-left:calc(-90vw*5);
+
+  }
+  100%{
+    margin-left:calc(-90vw*5);
+    
+  }
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+section{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  width: 75vw;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+figure{
+  width: 300px;
+  border: 1px solid #ccc;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgb(104, 104, 104);
+  transition: 100ms;
+}
+
+figure img{
+  height: 200px;
+  width: 100%;
+  
+}
+figure:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+figcaption button{
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.5rem;
+  border: 1px solid#ccc;
+  border-radius: 5px;
+  background-color: none;
+}
+
+figcaption button:hover{
+  cursor: pointer;
+  background-color: lightslategray;
+  color: white;
+}
+
+
+#ab{
+  width: 90vw;
+}
+#ab div{
+  display: flex;
+}
+
+#ab figure{
+ display:flex;
+}
+
+#ab p{
+  height: 200px;
+  width: 400px;
+  margin-top:20px;
+  font-size: 16px;
+  /* border: 3px solid #bee1e6; */
+  padding: 3px;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width:620px){
+  #ab div{
+      flex-direction: column;
+      align-items: center;
+      height: 500px;
+      /* width: 800px; */
+  }
+}
+
+footer{
+  height: 100px;
+  background-color: #2ba7bb;
+  padding: 20px;
+}
+
+.icon{
+  text-align: center;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+footer h5{
+  margin: 10px;
+  text-align: center;
+  color: aliceblue;
+}
